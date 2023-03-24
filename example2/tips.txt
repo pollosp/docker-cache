@@ -1,0 +1,1 @@
+ENV APT_CACHE_DIR /var/cache/myapp/apt-cache
