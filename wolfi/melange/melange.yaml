@@ -25,5 +25,3 @@ pipeline:
       bundle config set --local path ./vendor/bundle
       bundle install
       cp -ar * ${{targets.destdir}}
-      cp -a * ${{targets.destdir}}
-      cd /

@@ -12,7 +12,7 @@ contents:
     - busybox
     - sinatra@local
 entrypoint:
-  command: /bin/sh
+  command: /bin/sh init.sh
 
 archs:
   - aarch64
