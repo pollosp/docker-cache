@@ -1,0 +1,27 @@
+package:
+  name: sinatra
+  version: 0.0.1
+  description: a very basic melange example
+environment:
+  contents:
+    repositories:
+      - https://packages.wolfi.dev/os
+    packages:
+      - build-base
+      - busybox
+      - wget
+      - linux-headers
+      - build-base
+      - ruby3.2-bundler
+      - ruby-3.2-dev
+      - wolfi-baselayout
+      - ca-certificates-bundle
+
+pipeline:
+  - runs: |
+      set -x
+      mkdir -p "${{targets.destdir}}"
+      cd example2
+      bundle config set --local path ./vendor/bundle
+      bundle install
+      cp -ar * ${{targets.destdir}}

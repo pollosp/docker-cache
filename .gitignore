@@ -1,5 +1,11 @@
 *.gem
 *.rbc
+*.rsa*
+*.cdx*
+*.spdx*
+*.tar
+/wolfi/apko/packages/*
+/wolfi/melange/packages/*
 /.config
 /coverage/
 /InstalledFiles

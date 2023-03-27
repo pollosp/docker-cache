@@ -1,0 +1,18 @@
+contents:
+  repositories:
+    - https://packages.wolfi.dev/os
+    - '@local /work/packages'
+  keyring:
+    - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+    - '/work/melange.rsa.pub'
+  packages:
+    - wolfi-baselayout
+    - ca-certificates-bundle
+    - ruby3.2-bundler
+    - busybox
+    - sinatra@local
+entrypoint:
+  command: /bin/sh init.sh
+
+archs:
+  - aarch64
